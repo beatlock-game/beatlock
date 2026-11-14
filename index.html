@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BEATLOCK — Co-op Rhythm Game</title>
+  <meta name="description" content="BEATLOCK adalah rhythm game co-op bertema band untuk 1 sampai 3 pemain. Pilih BEAT, HARMONY, atau LEAD, lalu jaga band tetap di ketukan. Gratis, segera di itch.io." />
+  <meta name="theme-color" content="#07071A" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="BEATLOCK — One band. One shared beat." />
+  <meta property="og:description" content="Rhythm game co-op untuk 1 sampai 3 pemain. Pilih BEAT, HARMONY, atau LEAD. Gratis, segera di itch.io." />
+  <!-- WhatsApp dan medsos butuh URL absolut. Kalau alamat website berubah, ganti og:url dan og:image. -->
+  <meta property="og:url" content="https://faza-azka.github.io/beatlock/" />
+  <meta property="og:image" content="https://faza-azka.github.io/beatlock/assets/brand/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Rajdhani:wght@500;600;700&display=swap" />
+  <link rel="preload" as="image" href="assets/img/bg/menu.webp" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Langsung ke isi</a>
+
+  <!-- 1. Menu atas -->
+  <header class="site-header">
+    <div class="wrap nav-bar">
+      <a class="brand" href="#home" aria-label="BEATLOCK, ke atas halaman">
+        <img class="brand-logo" src="assets/img/brand/logo.webp" alt="BEATLOCK" width="1000" height="193" />
+        <img class="brand-emblem" src="assets/img/brand/emblem.webp" alt="BEATLOCK" width="128" height="128" />
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-menu" id="nav-menu" aria-label="Menu utama">
+        <ul>
+          <li><a href="#roles">Role</a></li>
+          <li><a href="#how-to-play">Cara Main</a></li>
+          <li><a href="#modes">Mode</a></li>
+          <li><a href="#features">Fitur</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="#beta">JOIN THE BETA</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/img/brand/logo.webp" alt="BEATLOCK" width="1000" height="193" fetchpriority="high" />
+          <h1>One band. <span class="grad-text">One shared beat.</span></h1>
+          <p class="hero-sub">Rhythm game co-op untuk 1 sampai 3 pemain. Pilih <b class="c-beat">BEAT</b>, <b class="c-harmony">HARMONY</b>, atau <b class="c-lead">LEAD</b>, lalu jaga band tetap di ketukan.</p>
+          <p class="facts">Gratis · Segera di itch.io · PC Windows</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#beta">JOIN THE BETA</a>
+            <a class="btn btn-ghost" href="#how-to-play">Lihat cara main</a>
+          </div>
+          <!-- Saat ITCH_URL di js/main.js diisi, label ini otomatis diganti tombol download. -->
+          <p class="itch-label" data-itch-label>Coming soon on itch.io</p>
+          <a class="btn btn-gold" data-itch-link hidden>Download gratis di itch.io</a>
+        </div>
+        <figure class="hero-shot">
+          <img src="assets/img/shots/04_gameplay_1.webp" width="1280" height="700" fetchpriority="high"
+            alt="Gameplay BEATLOCK: panel HARMONY, LEAD, dan BEAT berdampingan dengan note yang jatuh ke garis tiap lane" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. Pilih role -->
+    <section class="section" id="roles">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">Pilih role</p>
+          <h2>Kamu main jadi siapa?</h2>
+          <p class="sec-sub">Tiap pemain memegang satu instrumen. Tekan <b>Listen</b> di ketiga kartu untuk mendengar satu band utuh.</p>
+        </header>
+
+        <div class="role-grid">
+          <article class="role-card" data-role="beat">
+            <img class="role-portrait" src="assets/img/roles/portrait_beat.webp" width="512" height="320" loading="lazy" decoding="async"
+              alt="Drum kit merah menyala dengan dua stik bersilang" />
+            <div class="role-body">
+              <h3 class="role-name">BEAT</h3>
+              <p class="role-meta">Drum kit · 4 lane</p>
+              <p class="role-text">Pegang tempo yang diikuti seluruh band.</p>
+              <div class="playfield" style="--n:4">
+                <div class="lanes" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                <p class="keys"><span class="sr-only">Tombol bawaan:</span><kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd></p>
+              </div>
+              <button class="listen" type="button" data-role="beat" aria-pressed="false" aria-label="Listen BEAT">▶ Listen</button>
+              <a class="pick" href="#beta" data-pick="BEAT">Pilih BEAT →</a>
+            </div>
+          </article>
+
+          <article class="role-card" data-role="harmony">
+            <img class="role-portrait" src="assets/img/roles/portrait_harmony.webp" width="512" height="320" loading="lazy" decoding="async"
+              alt="Synth keyboard ungu menyala di bawah lampu sorot" />
+            <div class="role-body">
+              <h3 class="role-name">HARMONY</h3>
+              <p class="role-meta">Synth / keys · 3 lane</p>
+              <p class="role-text">Isi suara band dengan akor di setiap ketukan.</p>
+              <div class="playfield" style="--n:3">
+                <div class="lanes" aria-hidden="true"><i></i><i></i><i></i></div>
+                <p class="keys"><span class="sr-only">Tombol bawaan:</span><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd></p>
+              </div>
+              <button class="listen" type="button" data-role="harmony" aria-pressed="false" aria-label="Listen HARMONY">▶ Listen</button>
+              <a class="pick" href="#beta" data-pick="HARMONY">Pilih HARMONY →</a>
+            </div>
+          </article>
+
+          <article class="role-card" data-role="lead">
+            <img class="role-portrait" src="assets/img/roles/portrait_lead.webp" width="512" height="320" loading="lazy" decoding="async"
+              alt="Gitar listrik biru menyala di bawah lampu sorot" />
+            <div class="role-body">
+              <h3 class="role-name">LEAD</h3>
+              <p class="role-meta">Gitar lead · 5 lane</p>
+              <p class="role-text">Bawa melodi dan dorong lagu ke depan.</p>
+              <div class="playfield" style="--n:5">
+                <div class="lanes" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+                <p class="keys"><span class="sr-only">Tombol bawaan:</span><kbd>Q</kbd><kbd>W</kbd><kbd>E</kbd><kbd>R</kbd><kbd>T</kbd></p>
+              </div>
+              <button class="listen" type="button" data-role="lead" aria-pressed="false" aria-label="Listen LEAD">▶ Listen</button>
+              <a class="pick" href="#beta" data-pick="LEAD">Pilih LEAD →</a>
+            </div>
+          </article>
+        </div>
+        <p class="band-hint" id="band-hint" role="status">Nyalakan Listen di ketiga kartu untuk mendengar band lengkap.</p>
+      </div>
+    </section>
+
+    <!-- 4. Cara main -->
+    <section class="section section-alt" id="how-to-play">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">Cara main</p>
+          <h2>Empat langkah ke panggung</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-text">
+              <span class="step-no">01</span>
+              <h3>Pilih role dan level</h3>
+              <p>Pilih BEAT, HARMONY, atau LEAD, lalu pilih level Easy, Medium, atau Hard.</p>
+            </div>
+            <div class="step-media shots-2">
+              <img src="assets/img/shots/02_role_select.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar pilih role dengan kartu BEAT, HARMONY, dan LEAD" />
+              <img src="assets/img/shots/03_level_select.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar pilih level Canon Rock: Easy, Medium, dan Hard" />
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-text">
+              <span class="step-no">02</span>
+              <h3>Tekan tepat di ketukan</h3>
+              <p>Setelah hitung mundur 3, 2, 1, GO, note jatuh di lane kamu. Tekan saat note menyentuh garis, dan tahan untuk hold note.</p>
+              <p class="legend">
+                <img src="assets/img/game/note_classic.webp" width="96" height="32" loading="lazy" alt="Note" />
+                <span aria-hidden="true">→</span>
+                <img src="assets/img/game/keycap.webp" width="40" height="40" loading="lazy" alt="Tombol keyboard" />
+                <span>Note sampai di garis, tekan tombolnya.</span>
+              </p>
+            </div>
+            <div class="step-media">
+              <img src="assets/img/shots/05_gameplay_2.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Gameplay: note jatuh di lane LEAD menuju garis tekan" />
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-text">
+              <span class="step-no">03</span>
+              <h3>Jaga band tetap kompak</h3>
+              <p>Perfect +5 poin, Good +3, Miss 0. Combo dan Band Energy naik kalau kamu konsisten. Di ketukan Unison, semua role harus Perfect untuk bonus Band Energy.</p>
+            </div>
+            <div class="step-media judge-panel">
+              <div class="judge"><img src="assets/img/game/judge_perfect.webp" width="300" height="90" loading="lazy" alt="Perfect" /><b class="c-gold">+5</b></div>
+              <div class="judge"><img src="assets/img/game/judge_good.webp" width="300" height="90" loading="lazy" alt="Good" /><b>+3</b></div>
+              <div class="judge"><img src="assets/img/game/judge_miss.webp" width="300" height="90" loading="lazy" alt="Miss" /><b>0</b></div>
+              <p class="unison"><img src="assets/img/game/unison_star.webp" width="64" height="64" loading="lazy" alt="" /> <span><b>Unison:</b> semua role Perfect, Band Energy dapat bonus.</span></p>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-text">
+              <span class="step-no">04</span>
+              <h3>Dapatkan rank</h3>
+              <p>Rank dihitung dari akurasi. Kamu juga dapat koin untuk dipakai di Store.</p>
+              <ul class="ranks">
+                <li><img src="assets/img/game/rank_S.webp" width="160" height="160" loading="lazy" alt="Rank S" /><span>≥ 95%</span></li>
+                <li><img src="assets/img/game/rank_A.webp" width="160" height="160" loading="lazy" alt="Rank A" /><span>≥ 85%</span></li>
+                <li><img src="assets/img/game/rank_B.webp" width="160" height="160" loading="lazy" alt="Rank B" /><span>≥ 70%</span></li>
+                <li><img src="assets/img/game/rank_C.webp" width="160" height="160" loading="lazy" alt="Rank C" /><span>≥ 50%</span></li>
+                <li><img src="assets/img/game/rank_D.webp" width="160" height="160" loading="lazy" alt="Rank D" /><span>&lt; 50%</span></li>
+              </ul>
+            </div>
+            <div class="step-media">
+              <img src="assets/img/shots/07_results.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar Level Complete dengan rank S, team score, max combo, dan koin yang didapat" />
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. Mode main -->
+    <section class="section" id="modes">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">Mode main</p>
+          <h2>Sendiri atau bareng teman</h2>
+        </header>
+        <div class="mode-grid">
+          <article class="card mode-card">
+            <img src="assets/img/shots/06_gameplay_3.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Gameplay mode Solo: pemain memegang satu role, dua role lain dimainkan COM" />
+            <div class="card-body">
+              <h3>Solo</h3>
+              <p>Kamu pegang satu role, dua role lainnya dimainkan COM. Bisa pause dengan <kbd>Esc</kbd>.</p>
+            </div>
+          </article>
+          <article class="card mode-card">
+            <div class="shots-2">
+              <img src="assets/img/shots/12_multiplayer_menu.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Menu multiplayer LAN: buat room atau gabung room" />
+              <img src="assets/img/shots/13_lobby.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Lobby band: tiap pemain memilih role, slot kosong dimainkan COM" />
+            </div>
+            <div class="card-body">
+              <h3>Multiplayer LAN</h3>
+              <p>Sampai 3 pemain di jaringan Wi-Fi atau LAN yang sama. Host membuat room, pemain lain bergabung lewat pencarian otomatis atau alamat IP. Tiap pemain memilih role di lobby, role kosong diisi COM, dan skor tim sama untuk semua.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Lagu -->
+    <section class="section section-alt" id="song">
+      <div class="wrap song-grid">
+        <img class="song-cover" src="assets/img/song/canon_rock_cover.webp" width="512" height="512" loading="lazy" decoding="async" alt="Cover lagu Canon Rock" />
+        <div>
+          <p class="eyebrow">Lagu</p>
+          <h2>Canon Rock</h2>
+          <p><b>Canon Rock</b> adalah aransemen rock orisinal dari Canon in D karya Pachelbel (domain publik). 100 BPM, sekitar 2 menit, tersedia dalam Easy, Medium, dan Hard.</p>
+          <ul class="tags">
+            <li>100 BPM</li><li>± 2 menit</li><li>Easy</li><li>Medium</li><li>Hard</li>
+          </ul>
+          <audio class="song-player" id="song-player" controls preload="none" src="assets/audio/canon_rock_preview.mp3">
+            Browser kamu tidak mendukung pemutar audio.
+          </audio>
+          <p class="caption">Cuplikan 29 detik dari bagian klimaks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Fitur lain -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="eyebrow">Fitur lain</p>
+          <h2>Lebih dari satu lagu</h2>
+        </header>
+        <div class="feature-grid">
+          <article class="card">
+            <img src="assets/img/shots/14_level_creator.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Level Creator: memasukkan lagu sendiri dan menyusun note otomatis" />
+            <div class="card-body">
+              <h3>Level Creator</h3>
+              <p>Masukkan lagu sendiri. Game mendeteksi BPM, menyusun note awal untuk ketiga role secara otomatis (Auto Chart), lalu menilai tingkat kesulitannya 1 sampai 10 bintang.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/img/shots/09_store_note_skins.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Store note skin: Classic Gem, Neon Tube, 8-Bit Block, Flame Riff, dan Gold Star dengan harga dalam koin" />
+            <div class="card-body">
+              <h3>Store kosmetik</h3>
+              <p>Note skin, stage, dan banner profil, dibeli dengan koin hasil bermain. Semua item hanya kosmetik.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/img/shots/11_settings.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar Settings: tombol tiap role, volume, kalibrasi, dan layar penuh" />
+            <div class="card-body">
+              <h3>Settings</h3>
+              <p>Atur tombol tiap role, volume musik dan efek, kalibrasi offset audio dan input, serta layar penuh.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Daftar beta -->
+    <section class="section section-alt" id="beta">
+      <div class="wrap">
+        <div class="beta-panel">
+          <header class="sec-head">
+            <p class="eyebrow">Daftar beta</p>
+            <h2>Ikut main lebih dulu</h2>
+            <p class="sec-sub">Tinggalkan email dan pilih role favoritmu. Kami kabari saat beta dibuka.</p>
+          </header>
+
+          <form class="beta-form" id="beta-form" novalidate>
+            <fieldset class="role-pick">
+              <legend>Role favorit</legend>
+              <label class="pick-chip" data-role="beat">
+                <input type="radio" name="role" value="BEAT" required />
+                <img src="assets/img/roles/icon_beat.webp" width="96" height="96" loading="lazy" alt="" />
+                <span>BEAT</span>
+              </label>
+              <label class="pick-chip" data-role="harmony">
+                <input type="radio" name="role" value="HARMONY" required />
+                <img src="assets/img/roles/icon_harmony.webp" width="96" height="96" loading="lazy" alt="" />
+                <span>HARMONY</span>
+              </label>
+              <label class="pick-chip" data-role="lead">
+                <input type="radio" name="role" value="LEAD" required />
+                <img src="assets/img/roles/icon_lead.webp" width="96" height="96" loading="lazy" alt="" />
+                <span>LEAD</span>
+              </label>
+            </fieldset>
+
+            <div class="email-row">
+              <label class="sr-only" for="email">Alamat email</label>
+              <input id="email" type="email" name="email" placeholder="email@kamu.com" autocomplete="email" required />
+              <button class="btn btn-primary" type="submit">JOIN THE BETA</button>
+            </div>
+            <p class="form-status" id="form-status" role="status"></p>
+            <p class="caption">Tanpa spam. Satu email saat beta dibuka.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq-wrap">
+        <header class="sec-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Pertanyaan yang sering muncul</h2>
+        </header>
+        <div class="faq">
+          <details><summary>Berapa harganya?</summary><p>Gratis saat launch.</p></details>
+          <details><summary>Di mana download-nya?</summary><p>Di itch.io. Halamannya segera hadir. Daftarkan email kamu supaya dikabari saat rilis.</p></details>
+          <details><summary>Jalan di perangkat apa?</summary><p>PC Windows dengan keyboard. Game ini ringan: sudah berjalan lancar di laptop dengan grafis bawaan Intel HD Graphics 520.</p></details>
+          <details><summary>Bisa dimainkan di browser atau HP?</summary><p>Belum. Beatlock adalah game PC.</p></details>
+          <details><summary>Harus main bertiga?</summary><p>Tidak. Mode Solo bisa dimainkan sendiri, role lain dimainkan COM.</p></details>
+          <details><summary>Bisa main online lewat internet?</summary><p>Saat ini hanya LAN, artinya semua pemain di jaringan yang sama.</p></details>
+          <details><summary>Main pakai apa?</summary><p>Keyboard. Tombol tiap role bisa diatur di Settings.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. Footer -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/brand/emblem.webp" width="128" height="128" loading="lazy" alt="" />
+        <div>
+          <p class="footer-title">BEATLOCK © 2026</p>
+          <p class="caption">One band. One shared beat.</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <span data-itch-label>itch.io: segera hadir</span>
+        <a data-itch-link hidden>BEATLOCK di itch.io</a>
+        <!-- Kontak tim (email atau Instagram) menyusul. -->
+      </div>
+      <p class="credits">Font Orbitron dan Rajdhani (SIL Open Font License). Musik: Canon Rock, aransemen orisinal dari Canon in D karya Pachelbel (domain publik). Gambar dan musik dibuat oleh tim Beatlock.</p>
+    </div>
+  </footer>
+</body>
+</html>
