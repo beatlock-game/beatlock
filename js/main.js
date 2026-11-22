@@ -1,6 +1,6 @@
 // ===== Pengaturan: cukup isi dua nilai ini =====
 // Link halaman itch.io. Saat diisi, label "Coming soon" di hero dan footer otomatis diganti link download.
-const ITCH_URL = '';
+const ITCH_URL = 'https://tutu13.itch.io/beatlock';
 // URL layanan form (mis. Formspree). Selama kosong, pendaftaran hanya tersimpan di browser pengunjung (mode demo).
 const FORM_ENDPOINT = 'https://formspree.io/f/mqpqennv';
 
@@ -52,7 +52,7 @@ const PATTERNS = {
 
 const listenButtons = document.querySelectorAll('.listen');
 const bandHint = document.getElementById('band-hint');
-const songPlayer = document.getElementById('song-player');
+const songPlayers = document.querySelectorAll('.song-player');
 const active = new Set();
 const gains = {};
 const downloads = {}; // nama stem -> Promise<ArrayBuffer>
@@ -191,15 +191,22 @@ listenButtons.forEach((btn) => {
       // Siapkan stem lain di belakang layar untuk klik berikutnya.
       STEMS.forEach((name) => playStem(name).catch(() => {}));
     }
-    if (turnOn) songPlayer.pause();
+    if (turnOn) songPlayers.forEach((player) => player.pause());
     setRole(role, turnOn);
     if (!turnOn) clearNotes(role);
     updateBand();
   });
 });
 
-// Jangan tumpang tindih dengan cuplikan lagu.
-songPlayer.addEventListener('play', stopBand);
+// Jangan tumpang tindih dengan cuplikan lagu, dan hanya satu cuplikan yang berbunyi.
+songPlayers.forEach((player) => {
+  player.addEventListener('play', () => {
+    stopBand();
+    songPlayers.forEach((other) => {
+      if (other !== player) other.pause();
+    });
+  });
+});
 
 // Timer melambat di tab latar, jadi band dimatikan saat tab ditinggalkan.
 document.addEventListener('visibilitychange', () => {

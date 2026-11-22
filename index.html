@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BEATLOCK — Co-op Rhythm Game</title>
-  <meta name="description" content="BEATLOCK adalah rhythm game co-op bertema band untuk 1 sampai 3 pemain. Pilih BEAT, HARMONY, atau LEAD, lalu jaga band tetap di ketukan. Gratis, segera di itch.io." />
+  <meta name="description" content="BEATLOCK adalah rhythm game co-op bertema band untuk 1 sampai 3 pemain. Pilih BEAT, HARMONY, atau LEAD, lalu jaga band tetap di ketukan. Gratis di itch.io untuk PC Windows." />
   <meta name="theme-color" content="#07071A" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="BEATLOCK — One band. One shared beat." />
-  <meta property="og:description" content="Rhythm game co-op untuk 1 sampai 3 pemain. Pilih BEAT, HARMONY, atau LEAD. Gratis, segera di itch.io." />
+  <meta property="og:description" content="Rhythm game co-op untuk 1 sampai 3 pemain. Pilih BEAT, HARMONY, atau LEAD. Gratis di itch.io." />
   <!-- WhatsApp dan medsos butuh URL absolut. Kalau alamat website berubah, ganti og:url dan og:image. -->
   <meta property="og:url" content="https://beatlock-game.github.io/beatlock/" />
   <meta property="og:image" content="https://beatlock-game.github.io/beatlock/assets/brand/og-image.jpg" />
@@ -46,10 +46,11 @@
           <li><a href="#roles">Role</a></li>
           <li><a href="#how-to-play">Cara Main</a></li>
           <li><a href="#modes">Mode</a></li>
+          <li><a href="#song">Lagu</a></li>
           <li><a href="#features">Fitur</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-        <a class="btn btn-primary btn-sm" href="#beta">JOIN THE BETA</a>
+        <a class="btn btn-primary btn-sm" href="https://tutu13.itch.io/beatlock" target="_blank" rel="noopener">DOWNLOAD</a>
       </nav>
     </div>
   </header>
@@ -63,18 +64,17 @@
           <img class="hero-logo" src="assets/img/brand/logo.webp" alt="BEATLOCK" width="1000" height="193" fetchpriority="high" />
           <h1>One band. <span class="grad-text">One shared beat.</span></h1>
           <p class="hero-sub">Rhythm game co-op untuk 1 sampai 3 pemain. Pilih <b class="c-beat">BEAT</b>, <b class="c-harmony">HARMONY</b>, atau <b class="c-lead">LEAD</b>, lalu jaga band tetap di ketukan.</p>
-          <p class="facts">Gratis · Segera di itch.io · PC Windows</p>
+          <p class="facts">Gratis · PC Windows · 3 lagu · Solo &amp; LAN</p>
           <div class="cta-row">
-            <a class="btn btn-primary" href="#beta">JOIN THE BETA</a>
+            <a class="btn btn-gold" href="https://tutu13.itch.io/beatlock" target="_blank" rel="noopener">Download gratis di itch.io</a>
             <a class="btn btn-ghost" href="#how-to-play">Lihat cara main</a>
           </div>
-          <!-- Saat ITCH_URL di js/main.js diisi, label ini otomatis diganti tombol download. -->
-          <p class="itch-label" data-itch-label>Coming soon on itch.io</p>
-          <a class="btn btn-gold" data-itch-link hidden>Download gratis di itch.io</a>
+          <!-- Ganti nomor versi dan ukuran file setiap ada rilis baru di itch.io. -->
+          <p class="itch-label">Prototype v0.1 · Windows 64-bit · 62 MB</p>
         </div>
         <figure class="hero-shot">
           <img src="assets/img/shots/04_gameplay_1.webp" width="1280" height="700" fetchpriority="high"
-            alt="Gameplay BEATLOCK: panel HARMONY, LEAD, dan BEAT berdampingan dengan note yang jatuh ke garis tiap lane" />
+            alt="Gameplay BEATLOCK lagu Canon in D: panel HARMONY, LEAD, dan BEAT berdampingan dengan note yang jatuh ke garis tiap lane" />
         </figure>
       </div>
     </section>
@@ -147,6 +147,7 @@
         <header class="sec-head">
           <p class="eyebrow">Cara main</p>
           <h2>Empat langkah ke panggung</h2>
+          <p class="sec-sub">Baru pertama kali? Pilih <b>TUTORIAL</b> di menu Home untuk latihan singkat sekitar 1 menit.</p>
         </header>
 
         <ol class="steps">
@@ -158,7 +159,7 @@
             </div>
             <div class="step-media shots-2">
               <img src="assets/img/shots/02_role_select.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar pilih role dengan kartu BEAT, HARMONY, dan LEAD" />
-              <img src="assets/img/shots/03_level_select.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar pilih level Canon Rock: Easy, Medium, dan Hard" />
+              <img src="assets/img/shots/03_level_select.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar pilih level: tiga lagu dikelompokkan menurut Easy, Medium, dan Hard" />
             </div>
           </li>
 
@@ -175,7 +176,7 @@
               </p>
             </div>
             <div class="step-media">
-              <img src="assets/img/shots/05_gameplay_2.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Gameplay: note jatuh di lane LEAD menuju garis tekan" />
+              <img src="assets/img/shots/05_gameplay_2.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Gameplay lagu Hall of the Mountain King: note jatuh di lane LEAD menuju garis tekan" />
             </div>
           </li>
 
@@ -207,7 +208,7 @@
               </ul>
             </div>
             <div class="step-media">
-              <img src="assets/img/shots/07_results.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar Level Complete dengan rank S, team score, max combo, dan koin yang didapat" />
+              <img src="assets/img/shots/07_results.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Layar Level Complete lagu Hall of the Mountain King dengan rank S, team score, max combo, dan koin yang didapat" />
             </div>
           </li>
         </ol>
@@ -223,7 +224,7 @@
         </header>
         <div class="mode-grid">
           <article class="card mode-card">
-            <img src="assets/img/shots/06_gameplay_3.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Gameplay mode Solo: pemain memegang satu role, dua role lain dimainkan COM" />
+            <img src="assets/img/shots/06_gameplay_3.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Gameplay mode Solo lagu Pathétique: pemain memegang LEAD, BEAT dan HARMONY dimainkan COM" />
             <div class="card-body">
               <h3>Solo</h3>
               <p>Kamu pegang satu role, dua role lainnya dimainkan COM. Bisa pause dengan <kbd>Esc</kbd>.</p>
@@ -245,19 +246,34 @@
 
     <!-- 6. Lagu -->
     <section class="section section-alt" id="song">
-      <div class="wrap song-grid">
-        <img class="song-cover" src="assets/img/song/canon_rock_cover.webp" width="512" height="512" loading="lazy" decoding="async" alt="Cover lagu Canon Rock" />
-        <div>
+      <div class="wrap">
+        <header class="sec-head">
           <p class="eyebrow">Lagu</p>
-          <h2>Canon Rock</h2>
-          <p><b>Canon Rock</b> adalah aransemen rock orisinal dari Canon in D karya Pachelbel (domain publik). 100 BPM, sekitar 2 menit, tersedia dalam Easy, Medium, dan Hard.</p>
-          <ul class="tags">
-            <li>100 BPM</li><li>± 2 menit</li><li>Easy</li><li>Medium</li><li>Hard</li>
-          </ul>
-          <audio class="song-player" id="song-player" controls preload="none" src="assets/audio/canon_rock_preview.mp3">
-            Browser kamu tidak mendukung pemutar audio.
-          </audio>
-          <p class="caption">Cuplikan 29 detik dari bagian klimaks.</p>
+          <h2>Tiga lagu klasik, versi band</h2>
+          <p class="sec-sub">Aransemen orisinal tim Beatlock dari karya domain publik. Tiap lagu tersedia dalam Easy, Medium, dan Hard. Putar cuplikan bagian puncaknya di bawah.</p>
+        </header>
+        <div class="song-list">
+          <article class="song-card">
+            <img class="song-cover" src="assets/img/song/canon_rock_cover.webp" width="512" height="512" loading="lazy" decoding="async" alt="Cover lagu Canon in D" />
+            <h3>Canon in D</h3>
+            <p class="caption">Johann Pachelbel · versi rock</p>
+            <ul class="tags"><li>100 BPM</li><li>± 2 menit</li></ul>
+            <audio class="song-player" controls preload="none" src="assets/audio/canon_rock_preview.mp3">Browser kamu tidak mendukung pemutar audio.</audio>
+          </article>
+          <article class="song-card">
+            <img class="song-cover" src="assets/img/song/mountain_king_cover.webp" width="512" height="512" loading="lazy" decoding="async" alt="Cover lagu Hall of the Mountain King: mahkota emas di atas pegunungan" />
+            <h3>Hall of the Mountain King</h3>
+            <p class="caption">Edvard Grieg, 1875 · versi rock</p>
+            <ul class="tags"><li>150 BPM</li><li>± 2 menit</li></ul>
+            <audio class="song-player" controls preload="none" src="assets/audio/mountain_king_preview.mp3">Browser kamu tidak mendukung pemutar audio.</audio>
+          </article>
+          <article class="song-card">
+            <img class="song-cover" src="assets/img/song/pathetique_cover.webp" width="512" height="512" loading="lazy" decoding="async" alt="Cover lagu Pathétique: matahari synthwave di atas grid neon" />
+            <h3>Pathétique</h3>
+            <p class="caption">Ludwig van Beethoven, 1798 · versi synthwave</p>
+            <ul class="tags"><li>144 BPM</li><li>± 2 menit 10 detik</li></ul>
+            <audio class="song-player" controls preload="none" src="assets/audio/pathetique_preview.mp3">Browser kamu tidak mendukung pemutar audio.</audio>
+          </article>
         </div>
       </div>
     </section>
@@ -267,9 +283,30 @@
       <div class="wrap">
         <header class="sec-head">
           <p class="eyebrow">Fitur lain</p>
-          <h2>Lebih dari satu lagu</h2>
+          <h2>Latihan, saingan skor, dan lagu sendiri</h2>
         </header>
         <div class="feature-grid">
+          <article class="card">
+            <img src="assets/img/shots/15_tutorial.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Tutorial interaktif: kotak petunjuk menjelaskan not Unison sambil not turun di lane LEAD" />
+            <div class="card-body">
+              <h3>Tutorial interaktif</h3>
+              <p>Latihan sekitar 1 menit dengan petunjuk langsung di layar: cara menekan, hold note, dua not sejajar, Unison, dan Band Energy.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/img/shots/16_leaderboard.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Leaderboard: 10 skor terbaik Canon in D Medium untuk band penuh tiga pemain" />
+            <div class="card-body">
+              <h3>Leaderboard</h3>
+              <p>10 skor terbaik tiap lagu, dipisah menurut kombinasi role: solo, berdua, atau band penuh.</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/img/shots/17_history.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Riwayat permainan: daftar run terakhir lengkap dengan lagu, skor, dan rank" />
+            <div class="card-body">
+              <h3>Riwayat permainan</h3>
+              <p>Lihat lagi permainan terakhirmu: lagu, pemain, skor, dan rank tiap run.</p>
+            </div>
+          </article>
           <article class="card">
             <img src="assets/img/shots/14_level_creator.webp" width="1280" height="700" loading="lazy" decoding="async" alt="Level Creator: memasukkan lagu sendiri dan menyusun note otomatis" />
             <div class="card-body">
@@ -300,9 +337,9 @@
       <div class="wrap">
         <div class="beta-panel">
           <header class="sec-head">
-            <p class="eyebrow">Daftar beta</p>
-            <h2>Ikut main lebih dulu</h2>
-            <p class="sec-sub">Tinggalkan email dan pilih role favoritmu. Kami kabari saat beta dibuka.</p>
+            <p class="eyebrow">Kabar update</p>
+            <h2>Dapat kabar lagu baru</h2>
+            <p class="sec-sub">Tinggalkan email dan pilih role favoritmu. Kami kabari saat ada lagu atau update baru.</p>
           </header>
 
           <form class="beta-form" id="beta-form" novalidate>
@@ -328,10 +365,10 @@
             <div class="email-row">
               <label class="sr-only" for="email">Alamat email</label>
               <input id="email" type="email" name="email" placeholder="email@kamu.com" autocomplete="email" required />
-              <button class="btn btn-primary" type="submit">JOIN THE BETA</button>
+              <button class="btn btn-primary" type="submit">KABARI SAYA</button>
             </div>
             <p class="form-status" id="form-status" role="status"></p>
-            <p class="caption">Tanpa spam. Satu email saat beta dibuka.</p>
+            <p class="caption">Tanpa spam. Hanya email saat ada update.</p>
           </form>
         </div>
       </div>
@@ -345,12 +382,14 @@
           <h2>Pertanyaan yang sering muncul</h2>
         </header>
         <div class="faq">
-          <details><summary>Berapa harganya?</summary><p>Gratis saat launch.</p></details>
-          <details><summary>Di mana download-nya?</summary><p>Di itch.io. Halamannya segera hadir. Daftarkan email kamu supaya dikabari saat rilis.</p></details>
-          <details><summary>Jalan di perangkat apa?</summary><p>PC Windows dengan keyboard. Game ini ringan: sudah berjalan lancar di laptop dengan grafis bawaan Intel HD Graphics 520.</p></details>
+          <details><summary>Berapa harganya?</summary><p>Gratis. Item di Store dibeli dengan koin hasil bermain, bukan uang sungguhan.</p></details>
+          <details><summary>Di mana download-nya?</summary><p>Di itch.io: <a href="https://tutu13.itch.io/beatlock" target="_blank" rel="noopener">tutu13.itch.io/beatlock</a>. Ekstrak semua isi file zip, lalu jalankan <b>Beatlock.exe</b>. Jangan pisahkan Beatlock.exe dari Beatlock.pck.</p></details>
+          <details><summary>Windows memunculkan peringatan saat dibuka?</summary><p>Wajar, karena game belum ditandatangani secara digital. Klik <b>More info</b>, lalu <b>Run anyway</b>.</p></details>
+          <details><summary>Jalan di perangkat apa?</summary><p>PC Windows 64-bit dengan keyboard, butuh sekitar 130 MB ruang disk. Game ini ringan: sudah berjalan lancar di laptop dengan grafis bawaan Intel HD Graphics 520.</p></details>
           <details><summary>Bisa dimainkan di browser atau HP?</summary><p>Belum. Beatlock adalah game PC.</p></details>
           <details><summary>Harus main bertiga?</summary><p>Tidak. Mode Solo bisa dimainkan sendiri, role lain dimainkan COM.</p></details>
           <details><summary>Bisa main online lewat internet?</summary><p>Saat ini hanya LAN, artinya semua pemain di jaringan yang sama.</p></details>
+          <details><summary>Multiplayer LAN tidak tersambung?</summary><p>Pastikan semua PC di Wi-Fi atau LAN yang sama dan memakai versi game yang sama. Saat Windows Firewall bertanya, izinkan Beatlock di <b>Private networks</b> (game memakai port UDP 24680 dan 24681).</p></details>
           <details><summary>Main pakai apa?</summary><p>Keyboard. Tombol tiap role bisa diatur di Settings.</p></details>
         </div>
       </div>
@@ -372,7 +411,7 @@
         <a data-itch-link hidden>BEATLOCK di itch.io</a>
         <!-- Kontak tim (email atau Instagram) menyusul. -->
       </div>
-      <p class="credits">Font Orbitron dan Rajdhani (SIL Open Font License). Musik: Canon Rock, aransemen orisinal dari Canon in D karya Pachelbel (domain publik). Gambar dan musik dibuat oleh tim Beatlock.</p>
+      <p class="credits">Font Orbitron dan Rajdhani (SIL Open Font License). Musik: aransemen orisinal tim Beatlock dari karya domain publik Johann Pachelbel (Canon in D), Edvard Grieg (In the Hall of the Mountain King), dan Ludwig van Beethoven (Sonata Pathétique; melodi dari edisi Mutopia Project). Gambar dan musik dibuat oleh tim Beatlock dengan bantuan AI. Dibuat dengan Godot Engine.</p>
     </div>
   </footer>
 </body>

@@ -736,6 +736,37 @@ kbd {
   color-scheme: dark;
 }
 
+/* 6b. Lagu: tiga kartu */
+.song-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.song-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+}
+.song-card h3 {
+  margin: 16px 0 4px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.song-card .tags {
+  margin: 12px 0 16px;
+}
+.song-card .song-player {
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .song-list {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
 /* 7. Fitur lain */
 .feature-grid {
   display: grid;
